@@ -1,0 +1,182 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Transpar\u00eancia Matel\u00e2ndia",
+    "version": "1.0.0",
+    "description": "Schema com endpoints p\u00fablicos da Prefeitura de Matel\u00e2ndia"
+  },
+  "servers": [
+    {
+      "url": "https://matelandia.oxy.elotech.com.br/portaltransparencia-api"
+    }
+  ],
+  "paths": {
+    "/api/obras": {
+      "get": {
+        "summary": "Listar obras p\u00fablicas",
+        "operationId": "listarObras",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de obras"
+          }
+        }
+      }
+    },
+    "/api/licitacoes": {
+      "get": {
+        "summary": "Listar licita\u00e7\u00f5es",
+        "operationId": "listarLicitacoes",
+        "parameters": [
+          {
+            "name": "modalidade",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "exercicio",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de licita\u00e7\u00f5es"
+          }
+        }
+      }
+    },
+    "/api/diarias": {
+      "get": {
+        "summary": "Listar di\u00e1rias",
+        "operationId": "listarDiarias",
+        "parameters": [
+          {
+            "name": "mes",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "ano",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de di\u00e1rias"
+          }
+        }
+      }
+    },
+    "/api/contratos": {
+      "get": {
+        "summary": "Listar contratos",
+        "operationId": "listarContratos",
+        "parameters": [
+          {
+            "name": "nomeFornecedor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "exercicio",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de contratos"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
